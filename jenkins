@@ -1,0 +1,20 @@
+Pipeline {
+    agent any 
+    stages {
+        stage('Maven Version') { 
+            steps {
+                bat '''mvn -v'''
+            }
+        }
+        stage('Runing Test') { 
+            steps {
+                bat ''' mvn clean test '''
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                // 
+            }
+        }
+    }
+}
